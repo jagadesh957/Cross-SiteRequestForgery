@@ -1,0 +1,18 @@
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# Don't Rewrite For These filetypes
+	# you may want to add other extensions like mp3|mpeg|wav|pdf|xml|txt
+	RewriteCond %{REQUEST_URI}	!\.(bmp|css|gif|ico|jpg|jpeg|js|png|shtml|zip)$ [NC]
+
+	# Don't Rewrite For Existing Files
+	RewriteCond %{REQUEST_FILENAME} !-f [NC]
+
+	# Don't Rewrite For Existing Directories Except for the root directory
+	RewriteCond %{REQUEST_FILENAME} !-d [NC,OR]
+	RewriteCond %{REQUEST_URI}	^/$
+
+	RewriteRule (.*) /index.php [L]
+
+</IfModule>

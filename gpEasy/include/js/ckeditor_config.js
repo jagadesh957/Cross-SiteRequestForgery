@@ -1,0 +1,3 @@
+CKEDITOR.editorConfig=function(a){a.toolbar='gpeasy';a.resize_minWidth=true;a.height=300;a.toolbar_gpeasy=[
+['Source','-','Templates'],['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'],['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],'/',['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],['Link','Unlink','Anchor'],['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],'/',['Format','Font','FontSize'],['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],['TextColor','BGColor'],['Maximize','ShowBlocks','-','About']
+];a.contentsCss=gpBase+'/include/css/ckeditor_contents.css'};

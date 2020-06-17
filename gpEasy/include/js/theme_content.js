@@ -1,0 +1,4 @@
+$(function(){window.setTimeout(function(){setup()},500);function setup(){var a=$('<div class="draggable_droparea" id="theme_content_drop"></div>').appendTo('body');$('.output_area').each(function(i,b){var c=$(b);var d=c.offset();var w=c.outerWidth();var h=c.outerHeight();var e=c.find('.output_area_link');if(e.length>0){$('<div class="draggable_element"></div>').css({'position':'absolute','z-index':'8100','top':d.top,'left':d.left}).height(h-3).width(w-3).append(b.firstChild).append(e).fadeTo('slow',.5).appendTo(a)}
+})}
+$('.draggable_element').live('mouseenter',function(){$this=$(this);if($this.hasClass('target')){return}
+$this.find('.output_area_link').stop(true,true).fadeIn();$this.stop(true).fadeTo('200',0.95)}).live('mouseleave',function(){$this=$(this);$this.stop(true).fadeTo('slow',.5);$this.find('.output_area_link').stop(true,true).fadeOut()})});
